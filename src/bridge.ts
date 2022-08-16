@@ -8,7 +8,7 @@ export class Bridge {
 
   constructor(public host: string) {}
 
-  connectBridge(callback: () => void, dappAlias: any) {
+  connectBridge(callback: () => void, dappAlias: string) {
     const socket = io(this.host, {
       transports: ["websocket"],
     });
